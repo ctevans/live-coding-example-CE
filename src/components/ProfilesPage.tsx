@@ -22,21 +22,57 @@ export default class ProfilesPage extends React.Component<IProfilesPageProps, IP
                     name: "John Doe 1",
                     faveColor: "blue",
                     favePizza: "pineapple",
-                    hairColor: "black"
+                    hairColor: "black",
+                    photosList: [
+                        {
+                            id: 1,
+                            writtenDescription: "Me on beach",
+                            isMainPhoto: true
+                        }
+                    ],
+                    mainPhoto: {
+                        id: 1,
+                        writtenDescription: "Me on beach",
+                        isMainPhoto: true
+                    }
                 },
                 {
                     id: 2,
                     name: "Second User",
                     faveColor: "green",
                     favePizza: "pepperonio",
-                    hairColor: "blonde"
+                    hairColor: "blonde",
+                    photosList: [
+                        {
+                            id: 1,
+                            writtenDescription: "Me on beach",
+                            isMainPhoto: true
+                        }
+                    ],
+                    mainPhoto: {
+                        id: 1,
+                        writtenDescription: "Me on beach",
+                        isMainPhoto: true
+                    }
                 },
                 {
                     id: 3,
                     name: "Third User",
                     faveColor: "brown",
                     favePizza: "cheese",
-                    hairColor: "brown"
+                    hairColor: "brown",
+                    photosList: [
+                        {
+                            id: 1,
+                            writtenDescription: "Me on beach",
+                            isMainPhoto: true
+                        }
+                    ],
+                    mainPhoto: {
+                        id: 1,
+                        writtenDescription: "Me on beach",
+                        isMainPhoto: true
+                    }
                 }
             ]
         }
@@ -49,9 +85,9 @@ export default class ProfilesPage extends React.Component<IProfilesPageProps, IP
             <React.Fragment>
                 ProfilesPage
                 {
-                users.map(individualUser => (
-                    <ProfileMiniCard user={individualUser}/>
-                ))
+                    users.map(individualUser => (
+                        <ProfileMiniCard user={individualUser} />
+                    ))
                 }
             </React.Fragment>
         );
