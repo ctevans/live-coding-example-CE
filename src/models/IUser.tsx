@@ -5,3 +5,14 @@ export interface IUser {
     faveColor: string;
     hairColor: string;
 }
+
+export interface ILetter{
+    address: string;
+    postcode: string;
+    stamp: IStamp;
+}
+
+export interface IStamp {
+    image: string;
+    price: number;
+}
